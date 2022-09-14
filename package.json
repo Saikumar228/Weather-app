@@ -32,7 +32,8 @@
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}'",
     "tslint": "tslint --project tsconfig.json",
     "tslint:fix": "tslint --project tsconfig.json --fix",
-    "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\""
+    "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
+    "pre-commit": "npm run tslint:fix && npm run test"
   },
   "browserslist": {
     "production": [
@@ -56,7 +57,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run pre-commit"
     }
   },
   "lint-staged": {
