@@ -25,7 +25,6 @@ export const getDataError = () => {
 
 export const getWeatherByLocation = () => (dispatch: Function) => {
   const success = async (position: any) => {
-    // console.log(position);
     const { latitude, longitude } = position?.coords;
     dispatch(getDataLoading());
     await axios
