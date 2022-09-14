@@ -10,24 +10,30 @@
     "@types/node": "^16.11.57",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-loader-spinner": "^5.3.4",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.2",
+    "react-toastify": "^9.0.8",
+    "reactstrap": "^9.1.4",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:noWatch": "npm run test -- --watchAll=false",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "prepare": "husky install",
+    "lint:ts": "tslint 'src/**/*.{ts,tsx,js}'",
+    "tslint": "tslint --project tsconfig.json",
+    "tslint:fix": "tslint --project tsconfig.json --fix",
+    "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\""
   },
   "browserslist": {
     "production": [
@@ -43,17 +49,21 @@
   },
   "devDependencies": {
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "tslint": "^6.1.3",
+    "tslint-react": "^5.0.0",
+    "typescript": "^4.8.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test:noWatch"
     }
   },
   "lint-staged": {
-    "*.{js, json,css,md,html}": [
-      "prettier --single-quote --write",
-      "git add"
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run tslint:fix && npm run prettier"
     ]
   }
 }
