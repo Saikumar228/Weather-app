@@ -68,12 +68,20 @@ const WeatherDetails = () => {
           <Newbox>
             <div className="temp-details-container">
               <div className="temp-details-card">
-                <p className="temp-details">Felt Temp</p>
-                <p className="temp-details">Humdity</p>
-                <p className="temp-details">Wind</p>
-                <p className="temp-details">Visibility</p>
-                <p className="temp-details">Max Temp</p>
-                <p className="temp-details">Min Temp</p>
+                {[
+                  'Felt Temp.',
+                  'Humidity',
+                  'Wind',
+                  'Visibility',
+                  'Max Temp.',
+                  'Min Temp.',
+                ].map(
+                  (e, i): JSX.Element => (
+                    <p key={i} className="temp-details">
+                      {e}
+                    </p>
+                  )
+                )}
               </div>
               <div className="temp-details-card-2">
                 <p className="temp-details-2">
