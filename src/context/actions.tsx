@@ -53,7 +53,7 @@ export const getWeatherByLocation = () => (dispatch: Function) => {
   };
 
   const error = (err: any) => {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+    // console.warn(`ERROR(${err.code}): ${err.message}`);
     notificationHandler('Please turn on your location', 'error');
   };
 
