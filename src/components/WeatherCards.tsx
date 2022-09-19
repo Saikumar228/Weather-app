@@ -15,7 +15,3 @@ export const Newbox = ({ children }: NewboxChildren): JSX.Element => {
 export const Mapbox = ({ children }: NewboxChildren): JSX.Element => {
   return <Container className="zoom map-container">{children}</Container>;
 };
-
-export const NewText = (): JSX.Element => {
-  return <Container />;
-};

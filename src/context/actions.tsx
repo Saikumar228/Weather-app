@@ -53,7 +53,6 @@ export const getWeatherByLocation = () => (dispatch: Function) => {
   };
 
   const error = (err: any) => {
-    // console.warn(`ERROR(${err.code}): ${err.message}`);
     notificationHandler('Please turn on your location', 'error');
   };
 
@@ -110,7 +109,6 @@ export const syncData = (city: string) => async (dispatch: Function) => {
       notificationHandler('Data sync successfully', 'success');
     })
     .catch((err) => {
-      // console.log('res.status', err.status);
       dispatch(getDataError());
       notificationHandler("City weather data doesn't exist", 'error');
     });

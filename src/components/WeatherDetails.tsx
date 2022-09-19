@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { GlobalContext } from '../context/provider';
-import { Newbox, Mapbox } from './SmallComponents';
+import { Newbox, Mapbox } from './WeatherCards';
 import { Map } from './Map';
 import { FaSyncAlt } from 'react-icons/fa';
 import { Forcast } from './Forcast';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ForcastBox } from './SmallComponents';
+import { ForcastBox } from './WeatherCards';
 import { ForcastModal } from './ForcastModal';
 import { dateFormat } from '../helpers/ExtraFunctions';
 
