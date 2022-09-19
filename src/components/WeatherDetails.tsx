@@ -10,6 +10,8 @@ import { Loading } from './Loading';
 import { Map } from './Map';
 import { Mapbox, Newbox } from './WeatherCards';
 
+type WeatherDataType = any;
+
 const WeatherDetails = () => {
   const [isRotate, setIsRotate] = useState(false);
 
@@ -18,7 +20,7 @@ const WeatherDetails = () => {
     weatherDispatch?: Function;
   } = useContext(GlobalContext);
   const { weatherState } = weatherObject;
-  const weatherData: any = weatherState?.weatherData;
+  const weatherData: WeatherDataType = weatherState?.weatherData;
   const forcastData: any = weatherState?.forcastData;
   const isLoading: any = weatherState?.isLoading;
   const isError: any = weatherState?.isError;
