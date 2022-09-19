@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ImSun } from 'react-icons/im';
-import { dateFormat } from '../helpers/ExtraFunctions';
 import { MdOutlineNightsStay } from 'react-icons/md';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { dateFormat } from '../helpers/ExtraFunctions';
 
 interface ForcastDataType {
   data: any;

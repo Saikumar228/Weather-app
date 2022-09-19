@@ -1,5 +1,5 @@
-import React, { createContext, useReducer, ReactNode } from 'react';
-import { reducer, initState } from './reducer';
+import { createContext, ReactNode, useReducer } from 'react';
+import { initState, reducer } from './reducer';
 
 interface GlobalProviderProps {
   children: ReactNode;

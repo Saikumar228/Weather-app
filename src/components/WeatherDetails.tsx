@@ -1,14 +1,14 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { GlobalContext } from '../context/provider';
-import { Newbox, Mapbox } from './WeatherCards';
-import { Map } from './Map';
+import { useContext, useEffect, useState } from 'react';
 import { FaSyncAlt } from 'react-icons/fa';
-import { Forcast } from './Forcast';
 import { getWeatherByLocation, syncData } from '../context/actions';
+import { GlobalContext } from '../context/provider';
 import { celsius } from '../helpers/ExtraFunctions';
 import { getItem } from '../helpers/SessionStorage';
-import { Loading } from './Loading';
 import { Error } from './Error';
+import { Forcast } from './Forcast';
+import { Loading } from './Loading';
+import { Map } from './Map';
+import { Mapbox, Newbox } from './WeatherCards';
 
 type WeatherDataType = any;
 

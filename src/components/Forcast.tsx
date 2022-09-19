@@ -1,7 +1,6 @@
-import React from 'react';
-import { ForcastBox } from './WeatherCards';
-import { ForcastModal } from './ForcastModal';
 import { dateFormat } from '../helpers/ExtraFunctions';
+import { ForcastModal } from './ForcastModal';
+import { ForcastBox } from './WeatherCards';
 
 interface ForcastDataType {
   key: number;

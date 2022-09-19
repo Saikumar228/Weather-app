@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
-import { GlobalContext } from '../context/provider';
-import { Input, Button } from 'reactstrap';
+import { useContext, useState } from 'react';
 import { HiLocationMarker } from 'react-icons/hi';
+import { Button, Input } from 'reactstrap';
 import { getWeatherByCity, getWeatherByLocation } from '../context/actions';
+import { GlobalContext } from '../context/provider';
 
 type Citytype = string;
 

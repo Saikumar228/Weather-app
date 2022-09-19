@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { weatherAppAPI } from '../helpers/Api';
+import { notificationHandler } from '../helpers/NotificationHandler';
 import { setItem } from '../helpers/SessionStorage';
 import {
+  GET_DATA_ERROR,
   GET_DATA_LOADING,
   GET_DATA_SUCCESS,
-  GET_DATA_ERROR,
 } from './actionTypes';
-import { notificationHandler } from '../helpers/NotificationHandler';
 
 export const getDataLoading = () => {
   return { type: GET_DATA_LOADING };
